@@ -1,0 +1,10 @@
+name: Dashboard
+title: Dashboard
+account: weebeasties
+server: shinyapps.io
+appId: 201828
+bundleId: 927721
+url: https://weebeasties.shinyapps.io/Dashboard/
+when: 1501855511.56194
+asMultiple: FALSE
+asStatic: FALSE
