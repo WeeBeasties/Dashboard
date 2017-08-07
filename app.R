@@ -1,6 +1,7 @@
 library(shinydashboard)
-library(tidyverse)
-library(rsconnect)
+library(readr)
+#library(tidyverse)
+#library(rsconnect)
 
 myData  <- read_csv("sampleData")
 myError <- read_csv("sampleError")
