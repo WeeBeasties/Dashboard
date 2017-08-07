@@ -2,7 +2,9 @@ library(shinydashboard)
 library(tidyverse)
 library(rsconnect)
 
-myData <- read_csv("sampleData")
+myData  <- read_csv("sampleData")
+myError <- read_csv("sampleError")
+mySize  <- read_csv("sampleSize.csv")
 
 ui <- dashboardPage(
 	skin = "red",
@@ -74,7 +76,7 @@ ui <- dashboardPage(
 			background-color: #db494c !important; color: #FFFFFF !important;
 		}
 		.small-box.bg-purple {
-			background-color: ##34393c !important; color: #FFFFFF !important;
+			background-color: #606060 !important; color: #FFFFFF !important;
 		}
 		")),
 
@@ -119,55 +121,82 @@ server <- function(input, output) {
 
 	output$overallBox <- renderValueBox({
 		valueBox(
-			paste(sprintf("%0.2f", myData[as.integer(input$semester),10]),"±",sprintf("%0.2f",0.21),sep = " "), "OVERALL", icon = icon("list"),
+			paste(sprintf("%0.2f", myData[as.integer(input$semester),10]),
+			      "±",
+			      sprintf("%0.2f", myError[as.integer(input$semester),10]),sep = " "),
+			paste("OVERALL   (n = ",prettyNum(mySize[as.integer(input$semester),10],big.mark = ","),")",sep = ""), icon = icon("list"),
 			color = myColor(myData[as.integer(input$semester),10])
 		)
 	})
 	output$collBox <- renderValueBox({
 		valueBox(
-			sprintf("%0.2f", myData[as.integer(input$semester),2]), "Collaboration", icon = icon("handshake-o"),
+			paste(sprintf("%0.2f", myData[as.integer(input$semester),2]),
+			      "±",
+			      sprintf("%0.2f", myError[as.integer(input$semester),2]),sep = " "),
+			paste("Collaboration   (n = ",prettyNum(mySize[as.integer(input$semester),2],big.mark = ","),")",sep = ""), icon = icon("handshake-o"),
 			color = myColor(myData[as.integer(input$semester),2])
 		)
 	})
 	output$commBox <- renderValueBox({
 		valueBox(
-			sprintf("%0.2f", myData[as.integer(input$semester),3]), "Communication", icon = icon("comments"),
+			paste(sprintf("%0.2f", myData[as.integer(input$semester),3]),
+			      "±",
+			      sprintf("%0.2f", myError[as.integer(input$semester),3]),sep = " "),
+			paste("Communication   (n = ",prettyNum(mySize[as.integer(input$semester),3],big.mark = ","),")",sep = ""), icon = icon("comments"),
 			color = myColor(myData[as.integer(input$semester),3])
 		)
 	})
 	output$cultBox <- renderValueBox({
 		valueBox(
-			sprintf("%0.2f", myData[as.integer(input$semester),4]), "Culture", icon = icon("book", lib = "glyphicon"),
+			paste(sprintf("%0.2f", myData[as.integer(input$semester),4]),
+			      "±",
+			      sprintf("%0.2f", myError[as.integer(input$semester),4]),sep = " "),
+			paste("Culture   (n = ",prettyNum(mySize[as.integer(input$semester),4],big.mark = ","),")",sep = ""), icon = icon("book", lib = "glyphicon"),
 			color = myColor(myData[as.integer(input$semester),4])
 		)
 	})
 	output$divrBox <- renderValueBox({
 		valueBox(
-			sprintf("%0.2f", myData[as.integer(input$semester),5]), "Diversity", icon = icon("globe", lib = "glyphicon"),
+			paste(sprintf("%0.2f", myData[as.integer(input$semester),5]),
+			      "±",
+			      sprintf("%0.2f", myError[as.integer(input$semester),5]),sep = " "),
+			paste("Diversity   (n = ",prettyNum(mySize[as.integer(input$semester),5],big.mark = ","),")",sep = ""), icon = icon("globe", lib = "glyphicon"),
 			color = myColor(myData[as.integer(input$semester),5])
 		)
 	})
 	output$nsciBox <- renderValueBox({
 		valueBox(
-			sprintf("%0.2f", myData[as.integer(input$semester),6]), "Natural Sciences", icon = icon("leaf", lib = "glyphicon"),
+			paste(sprintf("%0.2f", myData[as.integer(input$semester),6]),
+			      "±",
+			      sprintf("%0.2f", myError[as.integer(input$semester),6]),sep = " "),
+			paste("Natural Sciences   (n = ",prettyNum(mySize[as.integer(input$semester),6],big.mark = ","),")",sep = ""), icon = icon("leaf", lib = "glyphicon"),
 			color = myColor(myData[as.integer(input$semester),6])
 		)
 	})
 	output$probBox <- renderValueBox({
 		valueBox(
-			sprintf("%0.2f", myData[as.integer(input$semester),7]), "Problem Solving", icon = icon("wrench", lib = "glyphicon"),
+			paste(sprintf("%0.2f", myData[as.integer(input$semester),7]),
+			      "±",
+			      sprintf("%0.2f", myError[as.integer(input$semester),7]),sep = " "),
+			paste("Problem Solving   (n = ",prettyNum(mySize[as.integer(input$semester),7],big.mark = ","),")",sep = ""), icon = icon("wrench", lib = "glyphicon"),
 			color = myColor(myData[as.integer(input$semester),7])
 		)
 	})
 	output$qualBox <- renderValueBox({
 		valueBox(
-			sprintf("%0.2f", myData[as.integer(input$semester),8]), "Quantitative Literacy", icon = icon("signal", lib = "glyphicon"),
+			paste(sprintf("%0.2f", myData[as.integer(input$semester),8]),
+			      "±",
+			      sprintf("%0.2f", myError[as.integer(input$semester),8]),sep = " "),
+			paste("Quantitative Literacy   (n = ",prettyNum(mySize[as.integer(input$semester),8],big.mark = ","),")",sep = ""), icon = icon("signal", lib = "glyphicon"),
 			color = myColor(myData[as.integer(input$semester),8])
 		)
 	})
 	output$ssocBox <- renderValueBox({
 		valueBox(
-			sprintf("%0.2f", myData[as.integer(input$semester),9]), "Self and Society", icon = icon("group"),
+			paste(sprintf("%0.2f", myData[as.integer(input$semester),9]),
+			      "±",
+			      sprintf("%0.2f", myError[as.integer(input$semester),9]),sep = " "),
+			paste("Self and Society   (n = ",prettyNum(mySize[as.integer(input$semester),9],big.mark = ","),")",sep = ""), icon = icon("group"),
 			color = myColor(myData[as.integer(input$semester),9])
 		)
 	})
