@@ -4,7 +4,7 @@ library(rsconnect)
 
 myData  <- read_csv("sampleData")
 myError <- read_csv("sampleError")
-mySize  <- read_csv("sampleSize.csv")
+mySize  <- read_csv("sampleSize")
 
 ui <- dashboardPage(
 	skin = "red",
