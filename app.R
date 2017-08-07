@@ -36,37 +36,34 @@ ui <- dashboardPage(
 		body > div > div > section > p {
 			font-size: 18px;
 		}
-		#overallBox > div > div.icon-large {
+		.shiny-html-output.col-sm-12.shiny-bound-output > div > div > p {
+			font-size: 18px;
+			font-weight: bold;
+		}
+		.shiny-html-output.col-sm-6.shiny-bound-output div > div > p {
+			font-size: 18px;
+			font-weight: bold;
+		}
+		.shiny-html-output.col-sm-12.shiny-bound-output > div > div > h3 {
+			font-size: 32px;
+			font-weight: bold;
+		}
+		.shiny-html-output.col-sm-6.shiny-bound-output div > div > h3 {
+			font-size: 32px;
+			font-weight: bold;
+		}
+		.shiny-html-output.col-sm-12.shiny-bound-output div > div.icon-large {
 			top: 5px;
 			right: 20px;
-			font-size: 70px;
+			font-size: 60px;
 			color: rgba(0, 0, 0, .20)
 		}
-		#overallBox > div > div.inner > p {
-			font-size: 18px;
-			font-weight: bold;
-		}
-		#collBox > div > div.icon-large {
-			top: 0px;
+		.shiny-html-output.col-sm-6.shiny-bound-output div > div.icon-large {
+			top: 10px;
 			right: 20px;
-			font-size: 70px;
+			font-size: 60px;
 			color: rgba(0, 0, 0, .20)
 		}
-		#collBox > div > div.inner > p {
-			font-size: 18px;
-			font-weight: bold;
-		}
-		#commBox > div > div.icon-large {
-			top: 0px;
-			right: 20px;
-			font-size: 70px;
-			color: rgba(0, 0, 0, .20)
-		}
-		#commBox > div > div.inner > p {
-			font-size: 18px;
-			font-weight: bold;
-		}
-
 		")),
 
 		img(src = 'boxflame.png', align = "left"),
