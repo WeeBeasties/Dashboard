@@ -28,58 +28,9 @@ ui <- dashboardPage(
 	),
 	dashboardBody(
 		# Setting the CSS of the dashboard to look prettier
-		tags$style(HTML("
-		body > div.wrapper > div > section > h2 {
-			display: block;
-			position: relative;
-			top: -11px;
-			font-size: 35px;
-			font-weight: 150;
-		}
-		body > div > div > section > p {
-			font-size: 18px;
-		}
-		.shiny-html-output.col-sm-12.shiny-bound-output > div > div > p {
-			font-size: 18px;
-			font-weight: bold;
-		}
-		.shiny-html-output.col-sm-6.shiny-bound-output div > div > p {
-			font-size: 18px;
-			font-weight: bold;
-		}
-		.shiny-html-output.col-sm-12.shiny-bound-output > div > div > h3 {
-			font-size: 32px;
-			font-weight: bold;
-		}
-		.shiny-html-output.col-sm-6.shiny-bound-output div > div > h3 {
-			font-size: 32px;
-			font-weight: bold;
-		}
-		.shiny-html-output.col-sm-12.shiny-bound-output div > div.icon-large {
-			top: 5px;
-			right: 20px;
-			font-size: 60px;
-			color: rgba(0, 0, 0, .20)
-		}
-		.shiny-html-output.col-sm-6.shiny-bound-output div > div.icon-large {
-			top: 10px;
-			right: 20px;
-			font-size: 60px;
-			color: rgba(0, 0, 0, .20)
-		}
-		.small-box.bg-green {
-			background-color: #3fa320 !important; color: #FFFFFF !important;
-		}
-		.small-box.bg-orange {
-			background-color: #bfbf01 !important; color: #FFFFFF !important;
-		}
-		.small-box.bg-red {
-			background-color: #db494c !important; color: #FFFFFF !important;
-		}
-		.small-box.bg-purple {
-			background-color: #606060 !important; color: #FFFFFF !important;
-		}
-		")),
+		tags$head(
+			tags$link(rel = "stylesheet", type = "text/css", href = "custom.css")
+		),
 
 		img(src = 'boxflame.png', align = "left"),
 		titlePanel("  Ferris State University"),
