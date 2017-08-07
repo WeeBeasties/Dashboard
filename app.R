@@ -64,6 +64,18 @@ ui <- dashboardPage(
 			font-size: 60px;
 			color: rgba(0, 0, 0, .20)
 		}
+		.small-box.bg-green {
+			background-color: #3fa320 !important; color: #FFFFFF !important;
+		}
+		.small-box.bg-orange {
+			background-color: #bfbf01 !important; color: #FFFFFF !important;
+		}
+		.small-box.bg-red {
+			background-color: #db494c !important; color: #FFFFFF !important;
+		}
+		.small-box.bg-purple {
+			background-color: ##34393c !important; color: #FFFFFF !important;
+		}
 		")),
 
 		img(src = 'boxflame.png', align = "left"),
@@ -107,7 +119,7 @@ server <- function(input, output) {
 
 	output$overallBox <- renderValueBox({
 		valueBox(
-			sprintf("%0.2f", myData[as.integer(input$semester),10]), "OVERALL", icon = icon("list"),
+			paste(sprintf("%0.2f", myData[as.integer(input$semester),10]),"±",sprintf("%0.2f",0.21),sep = " "), "OVERALL", icon = icon("list"),
 			color = myColor(myData[as.integer(input$semester),10])
 		)
 	})
