@@ -4,7 +4,7 @@ This repo contains the code and data to deliver an analytic dashboard for the re
 
 ## Repo contents
 
-.  
+```.  
 ├── Dashboard.Rproj  (the RStudio project file)  
 ├── LICENSE          (A copy of the MIT license)  
 ├── README.md        (This file)  
@@ -13,9 +13,9 @@ This repo contains the code and data to deliver an analytic dashboard for the re
 │   └── shinyapps.io  
 │       └── weebeasties  
 │           └── Dashboard.dcf  
-├── sampleData       (CSV data file giving means scores for each competency and semester)  
-├── sampleError      (CSV data file giving confidence intervals for each competency and semester) 
-├── sampleSize       (CSV data file giving sample size for each competency and semester)  
+├── sampleData       (CSV data file giving means scores)  
+├── sampleError      (CSV data file giving confidence intervals) 
+├── sampleSize       (CSV data file giving sample sizes)  
 └── www              (Web support files)  
     ├── boxflame.png (The awful boxflame)  
-    └── custom.css   (My style sheet to tweak the dashboard appearance)
+    └── custom.css   (My style sheet to tweak the dashboard appearance)```
