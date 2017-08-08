@@ -4,7 +4,8 @@ This repo contains the code and data to deliver an analytic dashboard for the re
 
 ## Repo contents
 
-```.  
+```
+.
 ├── Dashboard.Rproj  (the RStudio project file)  
 ├── LICENSE          (A copy of the MIT license)  
 ├── README.md        (This file)  
@@ -18,4 +19,6 @@ This repo contains the code and data to deliver an analytic dashboard for the re
 ├── sampleSize       (CSV data file giving sample sizes)  
 └── www              (Web support files)  
     ├── boxflame.png (The awful boxflame)  
-    └── custom.css   (My style sheet to tweak the dashboard appearance)```
+    └── custom.css   (My style sheet to tweak the dashboard appearance)
+```
+
