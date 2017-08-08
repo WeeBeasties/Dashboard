@@ -1,6 +1,6 @@
 # General Education Dashboard
 
-This repo contains the code and data to deliver an analytic dashboard for the revised General Education program status at Ferris State University. For the moment, fake data is being used... The live dashboard can be viewed online at [https://weebeasties/shinyapps.io/Dashboard](https://weebeasties/shinyapps.io/Dashboard). The recent <code>shinydashboard</code> package is used to do most of the heavy lifting. This work is released under the MIT license (feel free to fork it and use it as you wish).
+This repo contains the code and data to deliver an analytic dashboard for the revised General Education program status at Ferris State University. For the moment, fake data is being used... The live dashboard can be viewed online at [https://weebeasties.shinyapps.io/Dashboard](https://weebeasties.shinyapps.io/Dashboard). The recent <code>shinydashboard</code> package is used to do most of the heavy lifting. This work is released under the MIT license (feel free to fork it and use it as you wish).
 
 ## Repo contents
 
