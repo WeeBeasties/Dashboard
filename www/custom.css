@@ -57,20 +57,20 @@ body > div > div > section > p {
 
 /* Set color of the proficient boxes */
 .small-box.bg-green {
-	background-color: #3fa320 !important; color: #FFFFFF !important;
+	background-color: #a8c686 !important; color: #FFFFFF !important;
 }
 
 /* Set color of the progressing boxes */
 .small-box.bg-orange {
-	background-color: #bfbf01 !important; color: #FFFFFF !important;
+	background-color: #f3a712 !important; color: #FFFFFF !important;
 }
 
 /* Set color of the beginning boxes */
 .small-box.bg-red {
-	background-color: #db494c !important; color: #FFFFFF !important;
+	background-color: #e4572e !important; color: #FFFFFF !important;
 }
 
 /* Set color of the deficient boxes */
 .small-box.bg-purple {
-	background-color: #606060 !important; color: #FFFFFF !important;
+	background-color: #29335c !important; color: #FFFFFF !important;
 }
