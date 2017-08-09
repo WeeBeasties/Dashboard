@@ -35,6 +35,11 @@ ui <- dashboardPage(
 		img(src = 'boxflame.png', align = "left"),
 		titlePanel("  Ferris State University"),
 		p("This is a demonstration dashboard for the revised General Education program at Ferris State University. It has been created using Shiny and the R programming language. A full dashboard would contain several additional filters in the sidebar and operational instructions with advice on interpretation. This tool is meant to provide a clean and clear overview of the program's status."),
+		p(class="status deficient", "Deficient"),
+		p(class="status beginning", "Beginning"),
+		p(class="status progressing", "Progressing"),
+		p(class="status proficient", "Proficient"),
+		p(class="status advanced", "Advanced"),
 		fluidRow(
 			valueBoxOutput("overallBox", width = 12)
 		),

@@ -55,6 +55,11 @@ body > div > div > section > p {
 	color: rgba(0, 0, 0, .20)
 }
 
+/* Set color of the advanced boxes */
+.small-box.bg-blue {
+	background-color: #669bbc !important; color: #FFFFFF !important;
+}
+
 /* Set color of the proficient boxes */
 .small-box.bg-green {
 	background-color: #a8c686 !important; color: #FFFFFF !important;
@@ -73,4 +78,30 @@ body > div > div > section > p {
 /* Set color of the deficient boxes */
 .small-box.bg-purple {
 	background-color: #29335c !important; color: #FFFFFF !important;
+}
+
+.status {
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+}
+
+.deficient {
+    background-color: #29335c;
+}
+.beginning {
+    background-color: #e4572e;
+}
+.progressing {
+    background-color: #f3a712;
+}
+.proficient {
+    background-color: #a8c686;
+}
+.advanced {
+    background-color: #669bbc;
 }
