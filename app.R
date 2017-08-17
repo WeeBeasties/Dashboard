@@ -52,7 +52,24 @@ ui <- dashboardPage(
 			valueBoxOutput("probBox", width = 6),
 			valueBoxOutput("qualBox", width = 6),
 			valueBoxOutput("ssocBox", width = 6)
-		)
+		),
+			div(id="disqus_thread",
+			    HTML(
+			    	"<script>
+			    	(function() {
+				var d = document, s = d.createElement('script');
+			    	s.src = 'https://dashboard-3.disqus.com/embed.js';
+			    	s.setAttribute('data-timestamp', +new Date());
+				(d.head || d.body).appendChild(s);
+			    	})();
+			    	</script>
+			    	<noscript>Please enable JavaScript to view the <a href='https://disqus.com/?ref_noscript' rel='nofollow'>comments powered by Disqus.</a></noscript>"
+			    )
+			),
+		div(HTML('<script id="dsq-count-scr" src="//dashboard-3.disqus.com/count.js" async></script>'))
+
+
+
 
 	)
 )
